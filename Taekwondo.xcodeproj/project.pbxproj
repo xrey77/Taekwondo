@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10A0F5F2DBDE97800C52735 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F5E2DBDE97800C52735 /* AppDelegate.swift */; };
+		A10A0F612DBDE97800C52735 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F602DBDE97800C52735 /* SceneDelegate.swift */; };
+		A10A0F632DBDE97800C52735 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F622DBDE97800C52735 /* ViewController.swift */; };
+		A10A0F662DBDE97800C52735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10A0F642DBDE97800C52735 /* Main.storyboard */; };
+		A10A0F682DBDE97A00C52735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10A0F672DBDE97A00C52735 /* Assets.xcassets */; };
+		A10A0F6B2DBDE97A00C52735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10A0F692DBDE97A00C52735 /* LaunchScreen.storyboard */; };
+		A10A0F782DBE2D8400C52735 /* AboutusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F772DBE2D8400C52735 /* AboutusViewController.swift */; };
+		A10A0F7C2DBE2F7300C52735 /* ContactusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F7B2DBE2F7300C52735 /* ContactusViewController.swift */; };
+		A10A0F7F2DBE306C00C52735 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F7E2DBE306C00C52735 /* VisionViewController.swift */; };
+		A10A0F822DBE307A00C52735 /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F812DBE307A00C52735 /* MissionViewController.swift */; };
+		A10A0F852DBE309600C52735 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F842DBE309600C52735 /* RegisterViewController.swift */; };
+		A10A0F882DBE318800C52735 /* LocationmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F872DBE318800C52735 /* LocationmapViewController.swift */; };
+		A10A0F8B2DBE3B4B00C52735 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F8A2DBE3B4B00C52735 /* HomeViewController.swift */; };
+		A10A0F902DBF751B00C52735 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F8F2DBF751A00C52735 /* Registration.swift */; };
+		A151876F2DC1DB8800BB0DF5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151876E2DC1DB8800BB0DF5 /* ProfileViewController.swift */; };
+		A1C7A68F2DC3A01400872CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7A68E2DC3A01400872CC6 /* LoginViewController.swift */; };
+		A1FE75C52DC0B9D1002AB742 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE75C42DC0B9D1002AB742 /* LoginModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10A0F5B2DBDE97800C52735 /* Taekwondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taekwondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10A0F5E2DBDE97800C52735 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A10A0F602DBDE97800C52735 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A10A0F622DBDE97800C52735 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A10A0F652DBDE97800C52735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A10A0F672DBDE97A00C52735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10A0F6A2DBDE97A00C52735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A10A0F6C2DBDE97A00C52735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10A0F772DBE2D8400C52735 /* AboutusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutusViewController.swift; sourceTree = "<group>"; };
+		A10A0F7B2DBE2F7300C52735 /* ContactusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactusViewController.swift; sourceTree = "<group>"; };
+		A10A0F7E2DBE306C00C52735 /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
+		A10A0F812DBE307A00C52735 /* MissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
+		A10A0F842DBE309600C52735 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A10A0F872DBE318800C52735 /* LocationmapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationmapViewController.swift; sourceTree = "<group>"; };
+		A10A0F8A2DBE3B4B00C52735 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A10A0F8F2DBF751A00C52735 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		A151876E2DC1DB8800BB0DF5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A1C7A68E2DC3A01400872CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A1FE75C42DC0B9D1002AB742 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10A0F582DBDE97800C52735 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10A0F522DBDE97700C52735 = {
+			isa = PBXGroup;
+			children = (
+				A10A0F5D2DBDE97800C52735 /* Taekwondo */,
+				A10A0F5C2DBDE97800C52735 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10A0F5C2DBDE97800C52735 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10A0F5B2DBDE97800C52735 /* Taekwondo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A10A0F5D2DBDE97800C52735 /* Taekwondo */ = {
+			isa = PBXGroup;
+			children = (
+				A10A0F8E2DBF74D600C52735 /* Models */,
+				A10A0F762DBE2D5500C52735 /* Controllers */,
+				A10A0F5E2DBDE97800C52735 /* AppDelegate.swift */,
+				A10A0F602DBDE97800C52735 /* SceneDelegate.swift */,
+				A10A0F622DBDE97800C52735 /* ViewController.swift */,
+				A10A0F642DBDE97800C52735 /* Main.storyboard */,
+				A10A0F672DBDE97A00C52735 /* Assets.xcassets */,
+				A10A0F692DBDE97A00C52735 /* LaunchScreen.storyboard */,
+				A10A0F6C2DBDE97A00C52735 /* Info.plist */,
+			);
+			path = Taekwondo;
+			sourceTree = "<group>";
+		};
+		A10A0F762DBE2D5500C52735 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A10A0F772DBE2D8400C52735 /* AboutusViewController.swift */,
+				A10A0F7B2DBE2F7300C52735 /* ContactusViewController.swift */,
+				A10A0F7E2DBE306C00C52735 /* VisionViewController.swift */,
+				A10A0F812DBE307A00C52735 /* MissionViewController.swift */,
+				A10A0F842DBE309600C52735 /* RegisterViewController.swift */,
+				A10A0F872DBE318800C52735 /* LocationmapViewController.swift */,
+				A10A0F8A2DBE3B4B00C52735 /* HomeViewController.swift */,
+				A151876E2DC1DB8800BB0DF5 /* ProfileViewController.swift */,
+				A1C7A68E2DC3A01400872CC6 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A10A0F8E2DBF74D600C52735 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A10A0F8F2DBF751A00C52735 /* Registration.swift */,
+				A1FE75C42DC0B9D1002AB742 /* LoginModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10A0F5A2DBDE97800C52735 /* Taekwondo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10A0F6F2DBDE97A00C52735 /* Build configuration list for PBXNativeTarget "Taekwondo" */;
+			buildPhases = (
+				A10A0F572DBDE97800C52735 /* Sources */,
+				A10A0F582DBDE97800C52735 /* Frameworks */,
+				A10A0F592DBDE97800C52735 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Taekwondo;
+			productName = Taekwondo;
+			productReference = A10A0F5B2DBDE97800C52735 /* Taekwondo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10A0F532DBDE97700C52735 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					A10A0F5A2DBDE97800C52735 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = A10A0F562DBDE97700C52735 /* Build configuration list for PBXProject "Taekwondo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10A0F522DBDE97700C52735;
+			productRefGroup = A10A0F5C2DBDE97800C52735 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10A0F5A2DBDE97800C52735 /* Taekwondo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10A0F592DBDE97800C52735 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10A0F6B2DBDE97A00C52735 /* LaunchScreen.storyboard in Resources */,
+				A10A0F682DBDE97A00C52735 /* Assets.xcassets in Resources */,
+				A10A0F662DBDE97800C52735 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10A0F572DBDE97800C52735 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C7A68F2DC3A01400872CC6 /* LoginViewController.swift in Sources */,
+				A10A0F782DBE2D8400C52735 /* AboutusViewController.swift in Sources */,
+				A10A0F902DBF751B00C52735 /* Registration.swift in Sources */,
+				A10A0F632DBDE97800C52735 /* ViewController.swift in Sources */,
+				A10A0F5F2DBDE97800C52735 /* AppDelegate.swift in Sources */,
+				A10A0F852DBE309600C52735 /* RegisterViewController.swift in Sources */,
+				A10A0F7C2DBE2F7300C52735 /* ContactusViewController.swift in Sources */,
+				A10A0F8B2DBE3B4B00C52735 /* HomeViewController.swift in Sources */,
+				A1FE75C52DC0B9D1002AB742 /* LoginModel.swift in Sources */,
+				A10A0F822DBE307A00C52735 /* MissionViewController.swift in Sources */,
+				A10A0F7F2DBE306C00C52735 /* VisionViewController.swift in Sources */,
+				A151876F2DC1DB8800BB0DF5 /* ProfileViewController.swift in Sources */,
+				A10A0F612DBDE97800C52735 /* SceneDelegate.swift in Sources */,
+				A10A0F882DBE318800C52735 /* LocationmapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A10A0F642DBDE97800C52735 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A10A0F652DBDE97800C52735 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A10A0F692DBDE97A00C52735 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A10A0F6A2DBDE97A00C52735 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A10A0F6D2DBDE97A00C52735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A10A0F6E2DBDE97A00C52735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A10A0F702DBDE97A00C52735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7ZRZR97UNF;
+				INFOPLIST_FILE = Taekwondo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Reynald-Gragasin.Taekwondo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10A0F712DBDE97A00C52735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7ZRZR97UNF;
+				INFOPLIST_FILE = Taekwondo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Reynald-Gragasin.Taekwondo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10A0F562DBDE97700C52735 /* Build configuration list for PBXProject "Taekwondo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10A0F6D2DBDE97A00C52735 /* Debug */,
+				A10A0F6E2DBDE97A00C52735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10A0F6F2DBDE97A00C52735 /* Build configuration list for PBXNativeTarget "Taekwondo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10A0F702DBDE97A00C52735 /* Debug */,
+				A10A0F712DBDE97A00C52735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10A0F532DBDE97700C52735 /* Project object */;
+}
