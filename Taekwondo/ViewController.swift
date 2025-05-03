@@ -13,30 +13,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private var menuView: UIView!
     private let menuData: NSArray = ["About Us","Contact Us","Location Map","Vision","Mission","Competitions","Year Plan","Training Schedules","Olympics", "Login","Register","Profile","Logout"]
     private let menuIcon: NSArray = ["questionmark.diamond","phone","mappin.circle","person","person","person","person","person","person","person","person","person","person"]
-//    private let stackView = UIStackView()
     private let bottomView = UIView()
+    private let topView = UIView()
     private var bgView = UIView()
     private var isLogin = false
     private let loginDialog = UIView()
     private let Hstack = UIStackView()
     private var menuTable: UITableView!
     private var show = true
-    private var scrollView = UIScrollView()
+    private let scrollView: UIScrollView = {
+        let sv = UIScrollView()
+        sv.backgroundColor = UIColor.black
+        return sv
+    }()
     
-    
-    
-//    fileprivate let stackView: UIStackView = {
-//        let stack = UIStackView()
-//        stack.translatesAutoresizingMaskIntoConstraints = false
-//        stack.distribution = .fillEqually
-//        stack.axis = .horizontal
-//        stack.spacing = 10
-//        return stack
-//    }()
+    private var bodyView: UIView = {
+        let v = UIScrollView()
+        return v
+    }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradientBackground()
+        setupUI()
+//        setGradientBackground()
         
         //IMPLEMENT SWIPE GESTURES
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.swipedRight))
@@ -50,13 +50,234 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.swipedUp))
         swipeUp.direction = UISwipeGestureRecognizer.Direction.up
+    
+        ///BODY
+        let bodyIcon1 = UIImageView(frame: CGRect(x:1, y:70, width:380,height:200));
+        bodyIcon1.image = UIImage(named: "tkd1.png")
+        self.bodyView.addSubview(bodyIcon1)
+
+        let bodyLabel1 = UILabel(frame: CGRect(x: 10, y: 280, width: 350, height: 40))
+        bodyLabel1.numberOfLines = 0
+        bodyLabel1.text = "Taekwondo's introduction to the Philippines in the 1970s and its subsequent growth and establishment are key aspects of its evolution. Wikipedia notes that Grandmaster Kim Bok Man and Young Man Park initially introduced the martial art in 1970, with Kim continuing Park's work after being invited by President Marcos. Grandmaster Hong Sung-chon later played a crucial role in promoting Taekwondo and establishing the Philippine Taekwondo Association (PTA) in 1975."
+        bodyLabel1.textAlignment = .justified
+        bodyLabel1.textColor = UIColor.white
+        bodyLabel1.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bodyLabel1.sizeToFit()
+        self.bodyView.addSubview(bodyLabel1)
+
+        let boldAttribute1 = [
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
+        ]
+        let boldText1 = NSAttributedString(string: "Key Stages in the Evolution:", attributes: boldAttribute1)
+        let newString1 = NSMutableAttributedString()
+        newString1.append(boldText1)
+        let bodyLabel2 = UILabel(frame: CGRect(x: 10, y: 510, width: 350, height: 40))
+        bodyLabel2.textColor = UIColor.white
+        bodyLabel2.attributedText = newString1
+        self.bodyView.addSubview(bodyLabel2)
+
+        let boldAttribute2 = [
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
+        ]
+        let boldText2 = NSAttributedString(string: "Initial Introduction (1970s):", attributes: boldAttribute2)
+        let newString2 = NSMutableAttributedString()
+        newString2.append(boldText2)
+        let bodyLabel3 = UILabel(frame: CGRect(x: 10, y: 540, width: 350, height: 40))
+        bodyLabel3.textColor = UIColor.white
+        bodyLabel3.attributedText = newString2
+        self.bodyView.addSubview(bodyLabel3)
+
+        let bodyLabel4 = UILabel(frame: CGRect(x: 10, y: 570, width: 350, height: 40))
+        bodyLabel4.textColor = UIColor.white
+        bodyLabel4.text = "Taekwondo was introduced by Kim Bok Man and Young Man Park, but its initial momentum slowed after Park's departure in 1971."
+        bodyLabel4.numberOfLines = 0
+        bodyLabel4.textAlignment = .justified
+        bodyLabel4.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bodyLabel4.sizeToFit()
+        self.bodyView.addSubview(bodyLabel4)
+
+        let boldAttribute3 = [
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
+        ]
+        let boldText3 = NSAttributedString(string: "Revival and Establishment (Mid-1970s):", attributes: boldAttribute3)
+        let newString3 = NSMutableAttributedString()
+        newString3.append(boldText3)
+        let bodyLabel5 = UILabel(frame: CGRect(x: 10, y: 630, width: 350, height: 40))
+        bodyLabel5.textColor = UIColor.white
+        bodyLabel5.attributedText = newString3
+        self.bodyView.addSubview(bodyLabel5)
+
+        let bodyLabel6 = UILabel(frame: CGRect(x: 10, y: 660, width: 350, height: 40))
+        bodyLabel6.textColor = UIColor.white
+        bodyLabel6.text = "Grandmaster Hong Sung-chon's arrival in 1975 and subsequent establishment of the PTA marked a turning point, solidifying Taekwondo's presence in the Philippines."
+        bodyLabel6.numberOfLines = 0
+        bodyLabel6.textAlignment = .justified
+        bodyLabel6.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bodyLabel6.sizeToFit()
+        self.bodyView.addSubview(bodyLabel6)
+
+        let boldAttribute4 = [
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
+        ]
+        let boldText4 = NSAttributedString(string: "Growth and Popularity (1980s-Present):", attributes: boldAttribute4)
+        let newString4 = NSMutableAttributedString()
+        newString4.append(boldText4)
+        let bodyLabel7 = UILabel(frame: CGRect(x: 10, y: 750, width: 350, height: 40))
+        bodyLabel7.textColor = UIColor.white
+        bodyLabel7.attributedText = newString4
+        self.bodyView.addSubview(bodyLabel7)
+
+        let bodyLabel8 = UILabel(frame: CGRect(x: 10, y: 780, width: 350, height: 40))
+        bodyLabel8.textColor = UIColor.white
+        bodyLabel8.text = "The PTA, under Hong's leadership, focused on organizing clinics, developing training materials, and holding competitions, leading to a significant increase in Taekwondo's popularity."
+        bodyLabel8.numberOfLines = 0
+        bodyLabel8.textAlignment = .justified
+        bodyLabel8.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bodyLabel8.sizeToFit()
+        self.bodyView.addSubview(bodyLabel8)
+
+        let boldAttribute5 = [
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
+        ]
+        let boldText5 = NSAttributedString(string: "Formal Structure and Certification (2010s):", attributes: boldAttribute5)
+        let newString5 = NSMutableAttributedString()
+        newString5.append(boldText5)
+        let bodyLabel9 = UILabel(frame: CGRect(x: 10, y: 880, width: 350, height: 40))
+        bodyLabel9.textColor = UIColor.white
+        bodyLabel9.attributedText = newString4
+        self.bodyView.addSubview(bodyLabel9)
+
+        let bodyLabel10 = UILabel(frame: CGRect(x: 10, y: 910, width: 350, height: 40))
+        bodyLabel10.textColor = UIColor.white
+        bodyLabel10.text = "The establishment of the Philippine Taekwondo Foundation (PTF) in 2010 provided standardized education and certification for instructors, referees, and other key personnel, further professionalizing the sport."
+        bodyLabel10.numberOfLines = 0
+        bodyLabel10.textAlignment = .justified
+        bodyLabel10.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bodyLabel10.sizeToFit()
+        self.bodyView.addSubview(bodyLabel10)
+
+        let boldAttribute6 = [
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
+        ]
+        let boldText6 = NSAttributedString(string: "Current Status:", attributes: boldAttribute6)
+        let newString6 = NSMutableAttributedString()
+        newString6.append(boldText6)
+        let bodyLabel11 = UILabel(frame: CGRect(x: 10, y: 1030, width: 350, height: 40))
+        bodyLabel11.textColor = UIColor.white
+        bodyLabel11.attributedText = newString4
+        self.bodyView.addSubview(bodyLabel11)
+
+        let bodyLabel12 = UILabel(frame: CGRect(x: 10, y: 1060, width: 350, height: 40))
+        bodyLabel12.textColor = UIColor.white
+        bodyLabel12.text = "Taekwondo is now a widely recognized martial art in the Philippines, with a large number of practitioners and a strong network of regional committees, as highlighted by the Philippine Taekwondo Association."
+        bodyLabel12.numberOfLines = 0
+        bodyLabel12.textAlignment = .justified
+        bodyLabel12.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bodyLabel12.sizeToFit()
+        self.bodyView.addSubview(bodyLabel12)
+
+        let boldAttribute7 = [
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
+        ]
+        let boldText7 = NSAttributedString(string: "Current Status:", attributes: boldAttribute7)
+        let newString7 = NSMutableAttributedString()
+        newString7.append(boldText7)
+        let bodyLabel13 = UILabel(frame: CGRect(x: 10, y: 1160, width: 350, height: 40))
+        bodyLabel13.textColor = UIColor.white
+        bodyLabel13.attributedText = newString7
+        self.bodyView.addSubview(bodyLabel13)
+
+        let bodyLabel14 = UILabel(frame: CGRect(x: 10, y: 1190, width: 350, height: 40))
+        bodyLabel14.textColor = UIColor.white
+        bodyLabel14.text = "Taekwondo was introduced to the Philippines through the efforts of Kim Bok Man and Young Man Park. Grand Master Kim Bok Man arrived in 1970 to continue Park's legacy of propagating Taekwondo upon the invitation of President Marcos. Kim continued to pioneer Taekwondo worldwide and left the Philippines in 1971."
+        bodyLabel14.numberOfLines = 0
+        bodyLabel14.textAlignment = .justified
+        bodyLabel14.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bodyLabel14.sizeToFit()
+        self.bodyView.addSubview(bodyLabel14)
+
+        let boldAttribute8 = [
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 19.0)!
+        ]
+        let boldText8 = NSAttributedString(string: "Key Figures:", attributes: boldAttribute8)
+        let newString8 = NSMutableAttributedString()
+        newString8.append(boldText8)
+        let bodyLabel15 = UILabel(frame: CGRect(x: 10, y: 1350, width: 350, height: 40))
+        bodyLabel15.textColor = UIColor.white
+        bodyLabel15.attributedText = newString8
+        self.bodyView.addSubview(bodyLabel15)
+
+        let firstPartInfo1 = [
+            NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 16.0)!
+        ]
+        let attributedString1 = NSMutableAttributedString(string: "♦ Grandmaster Kim Bok Man :", attributes: firstPartInfo1)
+
+        // Second part with font size 20
+        let secondPartInfo1 = [
+            NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 16.0)!
+        ]
+        attributedString1.append(NSAttributedString(string: " One of the pioneers who introduced Taekwondo to the Philippines in 1970.", attributes: secondPartInfo1))
+
+        let bodyLabel16 = UILabel(frame: CGRect(x: 10, y: 1380, width: 350, height: 40))
+        bodyLabel16.textColor = UIColor.white
+        bodyLabel16.attributedText = attributedString1
+        bodyLabel16.numberOfLines = 0
+        bodyLabel16.textAlignment = .justified
+        bodyLabel16.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bodyLabel16.sizeToFit()
+        self.bodyView.addSubview(bodyLabel16)
+
         
+        let firstPartInfo2 = [
+            NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 16.0)!
+        ]
+        let attributedString2 = NSMutableAttributedString(string: "♦ Grandmaster Young Man Park :", attributes: firstPartInfo2)
+
+        let secondPartInfo2 = [
+            NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 16.0)!
+        ]
+        attributedString2.append(NSAttributedString(string: " Another early pioneer who worked with Kim Bok Man to introduce Taekwondo.", attributes: secondPartInfo2))
+
+        let bodyLabel17 = UILabel(frame: CGRect(x: 10, y: 1440, width: 350, height: 40))
+        bodyLabel17.textColor = UIColor.white
+        bodyLabel17.attributedText = attributedString2
+        bodyLabel17.numberOfLines = 0
+        bodyLabel17.textAlignment = .justified
+        bodyLabel17.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bodyLabel17.sizeToFit()
+        self.bodyView.addSubview(bodyLabel17)
+
+        let firstPartInfo3 = [
+            NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 16.0)!
+        ]
+        let attributedString3 = NSMutableAttributedString(string: "♦ Grandmaster Hong Sung-Chon :", attributes: firstPartInfo3)
+
+        let secondPartInfo3 = [
+            NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 16.0)!
+        ]
+        attributedString3.append(NSAttributedString(string: " Considered the 'Father of Taekwondo' in the Philippines, he played a pivotal role in its growth and establishment.", attributes: secondPartInfo3))
+
+        let bodyLabel18 = UILabel(frame: CGRect(x: 10, y: 1500, width: 350, height: 40))
+        bodyLabel18.textColor = UIColor.white
+        bodyLabel18.attributedText = attributedString3
+        bodyLabel18.numberOfLines = 0
+        bodyLabel18.textAlignment = .justified
+        bodyLabel18.lineBreakMode = NSLineBreakMode.byWordWrapping
+        bodyLabel18.sizeToFit()
+        self.bodyView.addSubview(bodyLabel18)
+
+        
+        
+        ///BOTTOM BAR
         self.view.addGestureRecognizer(swipeLeft)
         self.view.addGestureRecognizer(swipeRight)
         self.view.addGestureRecognizer(swipeDown)
         self.view.addGestureRecognizer(swipeUp)
         
-        //HORIZONTAL BOTTOM BAR ICONS
+        ///HORIZONTAL CUSTOM TOP BAR ICONS
+        topBar()
+        
+        //HORIZONTAL CUSTOM BOTTOM BAR ICONS
         bottomView.backgroundColor = .systemGray6
         bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 60, width: self.view.frame.size.width, height: 60)
         navigationController?.view.addSubview(bottomView)
@@ -140,13 +361,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         bottomView.addSubview(lbl6)
 
         //DRAWER MENU
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "line.horizontal.3"),
-            style: .done,
-            target: self,
-            action: #selector(barTapped(_:))
-        )
-        menuView = UIView(frame: CGRect(x: -250, y: 10, width: 250, height: self.view.frame.height))
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+//            image: UIImage(systemName: "line.horizontal.3"),
+//            style: .done,
+//            target: self,
+//            action: #selector(barTapped(_:))
+//        )
+        
+        
+        menuView = UIView(frame: CGRect(x: -250, y: 0, width: 250, height: self.view.frame.height))
         self.view.addSubview(menuView)
         self.view.bringSubviewToFront(menuView)
         menuTable = UITableView(frame: CGRect(x: 0, y: 0, width: 250, height: self.view.frame.height))
@@ -157,127 +380,63 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         menuTable.backgroundColor = .systemTeal
         menuTable.allowsSelection = true
         
-        
-        
-//        Hstack.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 300)
-//        Hstack.axis = NSLayoutConstraint.Axis.horizontal
-//        Hstack.distribution  = UIStackView.Distribution.equalSpacing
-//        Hstack.alignment = UIStackView.Alignment.center
-//        Hstack.backgroundColor = UIColor.orange
-//        Hstack.distribution = .equalSpacing
-//        Hstack.translatesAutoresizingMaskIntoConstraints = true
-        
-//        self.view.addSubview(stackView)
-//        scrollView.addSubview(stackView)
 
-
-//        stackView.heightAnchor.constraint(equalToConstant: 300).isActive = true
-//        stackView.widthAnchor.constraint(equalToConstant: stackView.frame.width).isActive = false
-//        stackView.centerXAnchor.constraint(equalTo: self.stackView.centerXAnchor).isActive = true
-//        stackView.centerYAnchor.constraint(equalTo: self.stackView.centerYAnchor).isActive = false
         
-//        let img1 = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-//        let img1 = UIImageView()
-//        img1.image = UIImage(named: "tikd1")
-//        img1.contentMode = .scaleAspectFill
-//        img1.clipsToBounds = true
+    }
+    
+    private func setupUI() {
+        self.view.addSubview(self.scrollView)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        self.scrollView.addSubview(self.bodyView)
+        bodyView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let hConst = bodyView.heightAnchor.constraint(equalTo: self.scrollView.heightAnchor)
+        hConst.isActive = true
+        hConst.priority = UILayoutPriority(50)
+        
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            
+            bodyView.topAnchor.constraint(equalTo: self.scrollView.topAnchor),
+            bodyView.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor),
+            bodyView.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor),
+            bodyView.trailingAnchor.constraint(equalTo: self.scrollView.trailingAnchor),
+            bodyView.widthAnchor.constraint(equalTo: self.scrollView.widthAnchor, multiplier: 1),
+            bodyView.heightAnchor.constraint(equalTo: self.scrollView.heightAnchor, multiplier: 2.5),
+
+        ])
+    }
+    
+    func topBar() {
+        topView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 60)
+        topView.backgroundColor = UIColor.systemGray6
+        view.addSubview(topView)
+
+        let TopIcon1 = UIImageView(frame: CGRect(x:10, y:30, width:50,height:20));
+        TopIcon1.isUserInteractionEnabled = true
+        TopIcon1.image = UIImage(named: "pta.png")  ///line.horizontal.3"
+        let topIcon1Tapped = UITapGestureRecognizer(target: self, action: #selector(barTapped(_:)))
+        TopIcon1.addGestureRecognizer(topIcon1Tapped)
+        topView.addSubview(TopIcon1)
+        
+//        let pta = UIImageView(frame: CGRect(x:120, y:20, width:90,height:35));
+//        pta.image = UIImage(named: "pta.png")
+//        topView.addSubview(pta)
 //
-////        let img2 = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-//        let img2 = UIImageView()
-//        img2.image = UIImage(named: "tikd1")
-//        img2.contentMode = .scaleAspectFill
-//        img2.clipsToBounds = true
+//        let wt = UIImageView(frame: CGRect(x:220, y:20, width:60,height:40));
+//        wt.image = UIImage(named: "wt.png")
+//        topView.addSubview(wt)
 //
-////        let img3 = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 300))
-//        let img3 = UIImageView()
-//        img3.image = UIImage(named: "tikd1")
-//        img3.contentMode = .scaleAspectFill
-//        img3.clipsToBounds = true
-//
-////        let img4 = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 300))
-//        let img4 = UIImageView()
-//        img4.image = UIImage(named: "tikd1")
-//        img4.contentMode = . scaleAspectFill
-//        img4.clipsToBounds = true
-//
-////        let img5 = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 300))
-//        let img5 = UIImageView()
-//        img5.image = UIImage(named: "tikd1")
-//        img5.contentMode = .scaleAspectFill
-//        img5.clipsToBounds = true
-//
-////        let img6 = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 300))
-//        let img6 = UIImageView()
-//        img6.image = UIImage(named: "tikd1")
-//        img6.contentMode = .scaleAspectFill
-//        img6.clipsToBounds = true
-//
-////        let img7 = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 300))
-//        let img7 = UIImageView()
-//        img7.image = UIImage(named: "tikd1")
-//        img7.contentMode = .scaleAspectFill
-//        img7.clipsToBounds = true
-//
-////        let img8 = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 300))
-//        let img8 = UIImageView()
-//        img8.image = UIImage(named: "tikd1")
-//        img8.contentMode = .scaleAspectFill
-//        img8.clipsToBounds = true
-//
-////        let img9 = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 300))
-//        let img9 = UIImageView()
-//        img9.image = UIImage(named: "tikd1")
-//        img9.contentMode = .scaleAspectFill
-//        img9.clipsToBounds = true
-//
-////        let img10 = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 300))
-//        let img10 = UIImageView()
-//        img10.image = UIImage(named: "tikd1")
-//        img10.contentMode = .scaleAspectFill
-//        img10.clipsToBounds = true
-//
-//
-//
-//        scrollView = UIScrollView()
-//        scrollView.delegate = self
-//        scrollView.contentSize = CGSize(width: 2400, height: 300)
-//        scrollView.addSubview(img1)
-//        scrollView.addSubview(img2)
-//        scrollView.addSubview(img3)
-//        scrollView.addSubview(img4)
-//        scrollView.addSubview(img5)
-//        scrollView.addSubview(img6)
-//        scrollView.addSubview(img7)
-//        scrollView.addSubview(img8)
-//        scrollView.addSubview(img9)
-//        scrollView.addSubview(img10)
-//        view.addSubview(scrollView)
-//
-//        scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-//        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-//        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//        let kukkiwon = UIImageView(frame: CGRect(x:290, y:20, width:60,height:40));
+//        kukkiwon.image = UIImage(named: "kukkiwon.png")
+//        topView.addSubview(kukkiwon)
 
 
     }
-    
-//    override func viewDidLayoutSubviews() {
-//          super.viewDidLayoutSubviews()
-//          scrollView.frame = view.bounds
-//      }
-
-//    @objc func tabBar(tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//
-//        if viewController == tabBarController.viewControllers?[0] {
-//            print("not ok")
-//            return false
-//        } else {
-//            print("ok")
-//            return true
-//        }
-//    }
-    
-            
+                    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuData.count
     }
@@ -440,7 +599,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 150
     }
 
-        
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    
 //    static prefix - (ObjCBool)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 //    {
 //      if ([touch.view isDescendantOfView:autocompleteTableView]) {
@@ -529,12 +692,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let navloginVC = UINavigationController(rootViewController: loginVC)
         navloginVC.modalPresentationStyle = .custom
         present(navloginVC, animated: true, completion: nil)
-        if UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == false {
-            print("done....")
-        }
-//        UserDefaults.standard.set(false, forKey: "IsUserLoggedIn")
-//        self.menuTable.reloadData()
-
     }
     
         
@@ -544,7 +701,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     @IBAction func nationalsNavigation(_ sender: UITapGestureRecognizer) {
-        print("Nationals...")
+        swipedDown()
+        
+//        let nationalsTVC = NationalsTableViewController()
+//        let natTVC = UINavigationController(rootViewController: nationalsTVC)
+//        natTVC.modalPresentationStyle = .custom
+//        present(natTVC, animated: true, completion: nil)
+
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nationalsTVC") as! NationalsTableViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func TBBNavigation(_ sender: UITapGestureRecognizer) {
@@ -574,11 +740,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             } else {
                 show = true
                 self.bottomView.isHidden = false
-
+                
+//                UIView.animate(withDuration: 3, delay: 0, options: .curveEaseOut) {
+//                    let moveright = CGAffineTransform(translationX: -(self.menuView.bounds.width), y: 0.0)
+//                    self.menuView.transform = moveright
+//
+//                } completion: { _ in
+//
+//                    DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
+//                        let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: -(self.topView.bounds.origin.y))
+//                        self.topView.transform = topBarmoveUp
+//                        self.topView.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: 60)
+//                    }
+//                }
+                
+                
                 UIView.animate(withDuration: 0.35, animations: { [self] in
                    let moveright = CGAffineTransform(translationX: -(menuView.bounds.width), y: 0.0)
                     menuView.transform = moveright
                 })
+                
+
+                
             }
     }
     
@@ -609,10 +792,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     //SWIPE GESTURES
+    
+
+    
     @objc func swipedRight()
     {
         self.bottomView.isHidden = true
         setupMenuview()
+        
+        ///TOP BAR ICONS
+        UIView.animate(withDuration: 0.35, animations: { [self] in
+            let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: -(topView.bounds.origin.y))
+            topView.transform = topBarmoveUp
+            topView.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: 60)
+        })
     }
 
     @objc func swipedLeft()
@@ -623,6 +816,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
            let moveright = CGAffineTransform(translationX: -(menuView.bounds.width), y: 0.0)
             menuView.transform = moveright
         })
+        
+        //TOP BAR ICONS
+        UIView.animate(withDuration: 0.35, animations: { [self] in
+            let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: +(topView.bounds.origin.y))
+            topView.transform = topBarmoveUp
+            topView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 60)
+        })
+
     }
     
     @objc func swipedDown()
@@ -633,17 +834,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let moveDown = CGAffineTransform(translationX: 0.0, y: +(bottomView.bounds.height))
             bottomView.transform = moveDown
         })
-
+        
     }
 
     @objc func swipedUp()
     {
         UIView.animate(withDuration: 0.35, animations: { [self] in
-
-            let moveDown = CGAffineTransform(translationX: 0.0, y: -(bottomView.bounds.height))
-            bottomView.transform = moveDown
+            let moveUp = CGAffineTransform(translationX: 0.0, y: -(bottomView.bounds.height))
+            bottomView.transform = moveUp
             self.bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 60, width: self.view.frame.size.width, height: 60)
         })
+       
+        //TOP BAR ICONS
+        UIView.animate(withDuration: 0.35, animations: { [self] in
+            let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: -(topView.bounds.origin.y))
+            topView.transform = topBarmoveUp
+            topView.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: 60)
+        })
+
     }
 
     @IBAction func loginIconCloseNavigation(_ sender: UITapGestureRecognizer) {
