@@ -410,6 +410,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         ])
     }
     
+
+    override func viewDidAppear(_ animated: Bool) {
+        self.showBars()
+    }
+    
+    func showBars() {
+        UIView.animate(withDuration: 0.35, animations: { [self] in
+
+            let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: +(self.topView.bounds.height))
+            self.topView.transform = topBarmoveUp
+            topView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 60)
+
+        }, completion: { [self](value: Bool) in
+
+            //BOTTOM BAR ICON DOWNWARD
+            let moveDown = CGAffineTransform(translationX: 0.0, y: -(self.bottomView.bounds.height))
+            self.bottomView.transform = moveDown
+            self.bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 60, width: self.view.frame.size.width, height: 60)
+            
+        })
+
+    }
+
+    
     func topBar() {
         topView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 60)
         topView.backgroundColor = UIColor.systemGray6
@@ -602,22 +626,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-
-    
-//    static prefix - (ObjCBool)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-//    {
-//      if ([touch.view isDescendantOfView:autocompleteTableView]) {
-//
-//        // Don't let selections of auto-complete entries fire the
-//        // gesture recognizer
-//        return NO;
-//      }
-//
-//      return YES;
-//    }
-
-    
-    
     
     @objc func navigatetoAboutus() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "aboutusVC") as! AboutusViewController
@@ -676,8 +684,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
-
-
     @objc func navigatetoRegistration() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "registerVC") as! RegisterViewController
         self.navigationController?.pushViewController(vc, animated: true)
@@ -685,8 +691,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @objc func navigatetoLogin() {
         
-        swipedDown()
-        swipedLeft()
+        self.swipedLeft()
+//        self.hideBars()
 
         let loginVC = LoginViewController()
         let navloginVC = UINavigationController(rootViewController: loginVC)
@@ -702,19 +708,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBAction func nationalsNavigation(_ sender: UITapGestureRecognizer) {
         swipedDown()
-        
-//        let nationalsTVC = NationalsTableViewController()
-//        let natTVC = UINavigationController(rootViewController: nationalsTVC)
-//        natTVC.modalPresentationStyle = .custom
-//        present(natTVC, animated: true, completion: nil)
-
-        
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "nationalsTVC") as! NationalsTableViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func TBBNavigation(_ sender: UITapGestureRecognizer) {
-        print("TBB...")
+        swipedDown()
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tbbCVC") as! TBBCollectionViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        swipedUp()
     }
 
     @IBAction func TBSNavigation(_ sender: UITapGestureRecognizer) {
@@ -790,66 +792,95 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
     }
+
+    func hideBars() {
+        UIView.animate(withDuration: 0.35, animations: { [self] in
+
+            let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: -(topView.bounds.origin.y))
+            topView.transform = topBarmoveUp
+            topView.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: 60)
+            
+        }, completion: { [self](value: Bool) in
+
+            let moveDown = CGAffineTransform(translationX: 0.0, y: +(self.bottomView.bounds.height))
+            self.bottomView.transform = moveDown
+        })
+    }
     
     //SWIPE GESTURES
-    
-
-    
     @objc func swipedRight()
     {
-        self.bottomView.isHidden = true
         setupMenuview()
         
         ///TOP BAR ICONS
         UIView.animate(withDuration: 0.35, animations: { [self] in
+
             let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: -(topView.bounds.origin.y))
             topView.transform = topBarmoveUp
             topView.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: 60)
+            
+        }, completion: { [self](value: Bool) in
+
+            let moveDown = CGAffineTransform(translationX: 0.0, y: +(self.bottomView.bounds.height))
+            self.bottomView.transform = moveDown
+
+            
         })
+
     }
 
     @objc func swipedLeft()
     {
-        self.bottomView.isHidden = false
-        UIView.animate(withDuration: 0.35, animations: { [self] in
-
-           let moveright = CGAffineTransform(translationX: -(menuView.bounds.width), y: 0.0)
-            menuView.transform = moveright
-        })
         
-        //TOP BAR ICONS
         UIView.animate(withDuration: 0.35, animations: { [self] in
-            let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: +(topView.bounds.origin.y))
-            topView.transform = topBarmoveUp
-            topView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 60)
-        })
+            //SWIPE LEFT
+            let moveright = CGAffineTransform(translationX: -(menuView.bounds.width), y: 0.0)
+             menuView.transform = moveright
 
+        }, completion: { [self](value: Bool) in
+            //TOP BAR ICON UPWARD
+            let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: +(self.topView.bounds.height))
+            self.topView.transform = topBarmoveUp
+            topView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 60)
+
+            //BOTTOM BAR ICON DOWNWARD
+            let moveDown = CGAffineTransform(translationX: 0.0, y: -(self.bottomView.bounds.height))
+            self.bottomView.transform = moveDown
+            self.bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 60, width: self.view.frame.size.width, height: 60)
+        })
     }
     
     @objc func swipedDown()
     {
-        self.bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 60, width: self.view.frame.size.width, height: 60)
-        UIView.animate(withDuration: 0.35, animations: { [self] in
-
-            let moveDown = CGAffineTransform(translationX: 0.0, y: +(bottomView.bounds.height))
-            bottomView.transform = moveDown
-        })
         
+        UIView.animate(withDuration: 0.35, animations: { [self] in
+            let bottomMoveDown = CGAffineTransform(translationX: 0.0, y: +(self.bottomView.bounds.height))
+            self.bottomView.transform = bottomMoveDown
+            bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height, width: self.view.frame.size.width, height: 60)
+            
+        }, completion: {(value: Bool) in
+
+            let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: -(self.topView.bounds.origin.y))
+            self.topView.transform = topBarmoveUp
+            self.topView.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: 60)
+
+        })
+                
     }
 
     @objc func swipedUp()
     {
         UIView.animate(withDuration: 0.35, animations: { [self] in
-            let moveUp = CGAffineTransform(translationX: 0.0, y: -(bottomView.bounds.height))
-            bottomView.transform = moveUp
-            self.bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height - 60, width: self.view.frame.size.width, height: 60)
-        })
-       
-        //TOP BAR ICONS
-        UIView.animate(withDuration: 0.35, animations: { [self] in
-            let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: -(topView.bounds.origin.y))
-            topView.transform = topBarmoveUp
-            topView.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: 60)
+
+            let topBarmoveUp = CGAffineTransform(translationX: 0.0, y: -(self.topView.bounds.origin.y))
+            self.topView.transform = topBarmoveUp
+            self.topView.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: 60)
+
+        }, completion: { [self](value: Bool) in
+
+            let moveDown = CGAffineTransform(translationX: 0.0, y: +(self.bottomView.bounds.size.height))
+            self.bottomView.transform = moveDown
+            self.bottomView.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height, width: self.view.frame.size.width, height: 60)
         })
 
     }
@@ -868,8 +899,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             target: self,
             action: #selector(barTapped(_:)))
 
-//        self.menuTable.reloadData()
-
         DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
            DispatchQueue.main.async {
                 UserDefaults.standard.set(false, forKey: "IsUserLoggedIn")
@@ -880,41 +909,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     }
     
-}
-
-class SettingsController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .cyan
-    }
-}
-
-class InstructorsController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .cyan
-    }
-}
-
-class TBBController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .brown
-    }
-}
-
-class TBSController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .blue
-    }
-}
-
-class NationalTeamController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .lightGray
-        
-    }
 }
 

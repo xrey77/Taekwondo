@@ -169,8 +169,7 @@ class LoginViewController: UIViewController {
             forgotIcon.image = UIImage(systemName: "multiply.square")
             forgotIcon.tintColor = UIColor.white
             forgotIcon.isUserInteractionEnabled = true
-//            let forgotTapped = UITapGestureRecognizer(target: self, action: #selector(forgotIconCloseNavigation(_ :)))
-            let forgotsTapped = UIGestureRecognizer(target: self, action: #selector(forgotIconCloseNavigation))
+            let forgotsTapped = UITapGestureRecognizer(target: self, action: #selector(forgotIconCloseNavigation(_ :)))
             forgotIcon.addGestureRecognizer(forgotsTapped)
             forgotDialog.addSubview(forgotIcon)
 
@@ -231,8 +230,9 @@ class LoginViewController: UIViewController {
                 let moveDown = CGAffineTransform(translationX: 0.0, y: -(forgotDialog.bounds.height))
                 self.forgotDialog.transform = moveDown
                 forgotDialog.frame = CGRect(x: 60, y: -200, width: 250, height: 200)
+                dismiss(animated: true, completion: nil)
+
             })
-            dismiss(animated: true, completion: nil)
         }
         
         func postLogin() {
