@@ -110,55 +110,31 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="100"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="100" minimumInteritemSpacing="100" sectionInsetReference="layoutMargins" id="cIe-Dp-mMu">
-                            <size key="itemSize" width="100" height="277"/>
+                            <size key="itemSize" width="281" height="277"/>
                             <size key="headerReferenceSize" width="300" height="50"/>
-                            <size key="footerReferenceSize" width="0.0" height="100"/>
+                            <size key="footerReferenceSize" width="300" height="100"/>
                             <inset key="sectionInset" minX="0.0" minY="50" maxX="20" maxY="50"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="IJj-aF-mOt">
-                                <rect key="frame" x="72" y="108" width="250" height="277"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="Cell" id="IJj-aF-mOt">
+                                <rect key="frame" x="56.5" y="108" width="281" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="H5E-TW-23D">
-                                    <rect key="frame" x="0.0" y="0.0" width="250" height="277"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="281" height="277"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIF-kb-yxL">
-                                            <rect key="frame" x="1" y="17" width="200" height="183"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <accessibility key="accessibilityConfiguration">
-                                                <accessibilityTraits key="traits" image="YES" allowsDirectInteraction="YES"/>
-                                            </accessibility>
-                                        </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iey-ei-d8E">
-                                            <rect key="frame" x="0.0" y="220" width="200" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="250" height="277"/>
+                                <size key="customSize" width="281" height="277"/>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="headerView" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-lM-noK">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="headerView" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-lM-noK">
                             <rect key="frame" x="0.0" y="8" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKW-Ec-feV">
-                                    <rect key="frame" x="20" y="10" width="300" height="40"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
                             <color key="backgroundColor" systemColor="systemYellowColor"/>
                         </collectionReusableView>
-                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="h8Q-Y7-xRX">
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footerView" id="h8Q-Y7-xRX">
                             <rect key="frame" x="0.0" y="435" width="414" height="100"/>
                             <autoresizingMask key="autoresizingMask"/>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="UmR-HC-Zc4" id="lcx-qA-gBp"/>
@@ -170,6 +146,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r95-SH-ue4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2373.913043478261" y="705.80357142857144"/>
+        </scene>
+        <!--Tbb Details View Controller-->
+        <scene sceneID="b9p-pi-cCD">
+            <objects>
+                <viewController storyboardIdentifier="tbbDtlsVC" id="rri-t8-fKS" customClass="TbbDetailsViewController" customModule="Taekwondo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kby-gz-5om">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="g3m-V0-leF"/>
+                        <color key="backgroundColor" red="0.18679985404014587" green="0.92456716299057007" blue="0.90277057886123657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y02-Yw-0a6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2999" y="745"/>
+        </scene>
+        <!--Tbs View Controller-->
+        <scene sceneID="2EG-pp-sFQ">
+            <objects>
+                <viewController storyboardIdentifier="tbsVC" id="Zcc-hx-dop" customClass="TbsViewController" customModule="Taekwondo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Xs-Fp-PhK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mQF-TQ-RyO"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTU-0U-RIT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3650.7246376811595" y="738.61607142857144"/>
+        </scene>
+        <!--Tbs Details View Controller-->
+        <scene sceneID="sOH-qr-QTn">
+            <objects>
+                <viewController storyboardIdentifier="tbsDtlsVC" id="nja-x7-opF" customClass="TbsDetailsViewController" customModule="Taekwondo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Md7-7q-ajp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="etZ-lB-0Ie"/>
+                        <color key="backgroundColor" red="0.9638707408233308" green="0.22378422953117194" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CF4-je-TLS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4284" y="751"/>
         </scene>
         <!--About Us-->
         <scene sceneID="GmU-SC-MfC">

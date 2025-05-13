@@ -24,9 +24,17 @@
 		A12EA98B2DC82F5C006F5C4D /* TBBCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA98A2DC82F5C006F5C4D /* TBBCollectionViewController.swift */; };
 		A12EA98E2DC8AFDE006F5C4D /* Tbb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA98D2DC8AFDE006F5C4D /* Tbb.swift */; };
 		A151876F2DC1DB8800BB0DF5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151876E2DC1DB8800BB0DF5 /* ProfileViewController.swift */; };
+		A17BB4FE2DD36EAD00010C1D /* TbsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17BB4FD2DD36EAD00010C1D /* TbsDetailsViewController.swift */; };
 		A1ABCD682DC4F81F00786006 /* Nationals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABCD672DC4F81F00786006 /* Nationals.swift */; };
+		A1B55B882DD04A1100E73BB1 /* TbbDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B55B872DD04A1100E73BB1 /* TbbDetailsViewController.swift */; };
 		A1C7A68F2DC3A01400872CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7A68E2DC3A01400872CC6 /* LoginViewController.swift */; };
 		A1D4F8202DC4BDD5003793D5 /* NationalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4F81F2DC4BDD5003793D5 /* NationalsTableViewController.swift */; };
+		A1EA2FA62DD2DE0B00766589 /* Tbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA2FA52DD2DE0B00766589 /* Tbs.swift */; };
+		A1F89A092DD197E9000A56DB /* TbsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F89A082DD197E9000A56DB /* TbsViewController.swift */; };
+		A1F89A152DD1C677000A56DB /* TbsCollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F89A142DD1C677000A56DB /* TbsCollectionViewCell1.swift */; };
+		A1F89A192DD1C684000A56DB /* tbsCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F89A182DD1C684000A56DB /* tbsCollectionViewCell2.swift */; };
+		A1F89A1C2DD1C690000A56DB /* TbsCollectionViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F89A1B2DD1C690000A56DB /* TbsCollectionViewCell3.swift */; };
+		A1F89A1F2DD1C69E000A56DB /* TbsCollectionViewCell4.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F89A1E2DD1C69D000A56DB /* TbsCollectionViewCell4.swift */; };
 		A1FE75C52DC0B9D1002AB742 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE75C42DC0B9D1002AB742 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,9 +58,17 @@
 		A12EA98A2DC82F5C006F5C4D /* TBBCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBBCollectionViewController.swift; sourceTree = "<group>"; };
 		A12EA98D2DC8AFDE006F5C4D /* Tbb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tbb.swift; sourceTree = "<group>"; };
 		A151876E2DC1DB8800BB0DF5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A17BB4FD2DD36EAD00010C1D /* TbsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbsDetailsViewController.swift; sourceTree = "<group>"; };
 		A1ABCD672DC4F81F00786006 /* Nationals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nationals.swift; sourceTree = "<group>"; };
+		A1B55B872DD04A1100E73BB1 /* TbbDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbbDetailsViewController.swift; sourceTree = "<group>"; };
 		A1C7A68E2DC3A01400872CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A1D4F81F2DC4BDD5003793D5 /* NationalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalsTableViewController.swift; sourceTree = "<group>"; };
+		A1EA2FA52DD2DE0B00766589 /* Tbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tbs.swift; sourceTree = "<group>"; };
+		A1F89A082DD197E9000A56DB /* TbsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbsViewController.swift; sourceTree = "<group>"; };
+		A1F89A142DD1C677000A56DB /* TbsCollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbsCollectionViewCell1.swift; sourceTree = "<group>"; };
+		A1F89A182DD1C684000A56DB /* tbsCollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tbsCollectionViewCell2.swift; sourceTree = "<group>"; };
+		A1F89A1B2DD1C690000A56DB /* TbsCollectionViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbsCollectionViewCell3.swift; sourceTree = "<group>"; };
+		A1F89A1E2DD1C69D000A56DB /* TbsCollectionViewCell4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbsCollectionViewCell4.swift; sourceTree = "<group>"; };
 		A1FE75C42DC0B9D1002AB742 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +102,9 @@
 		A10A0F5D2DBDE97800C52735 /* Taekwondo */ = {
 			isa = PBXGroup;
 			children = (
+				A1EA2FA92DD331D600766589 /* CollectionViews */,
+				A1F89A132DD1C653000A56DB /* ViewCells */,
+				A1B55B812DD037AD00E73BB1 /* Utilities */,
 				A10A0F8E2DBF74D600C52735 /* Models */,
 				A10A0F762DBE2D5500C52735 /* Controllers */,
 				A10A0F5E2DBDE97800C52735 /* AppDelegate.swift */,
@@ -113,6 +132,9 @@
 				A1C7A68E2DC3A01400872CC6 /* LoginViewController.swift */,
 				A1D4F81F2DC4BDD5003793D5 /* NationalsTableViewController.swift */,
 				A12EA98A2DC82F5C006F5C4D /* TBBCollectionViewController.swift */,
+				A1B55B872DD04A1100E73BB1 /* TbbDetailsViewController.swift */,
+				A1F89A082DD197E9000A56DB /* TbsViewController.swift */,
+				A17BB4FD2DD36EAD00010C1D /* TbsDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,8 +146,34 @@
 				A1FE75C42DC0B9D1002AB742 /* LoginModel.swift */,
 				A1ABCD672DC4F81F00786006 /* Nationals.swift */,
 				A12EA98D2DC8AFDE006F5C4D /* Tbb.swift */,
+				A1EA2FA52DD2DE0B00766589 /* Tbs.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A1B55B812DD037AD00E73BB1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A1EA2FA92DD331D600766589 /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionViews;
+			sourceTree = "<group>";
+		};
+		A1F89A132DD1C653000A56DB /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A1F89A142DD1C677000A56DB /* TbsCollectionViewCell1.swift */,
+				A1F89A182DD1C684000A56DB /* tbsCollectionViewCell2.swift */,
+				A1F89A1B2DD1C690000A56DB /* TbsCollectionViewCell3.swift */,
+				A1F89A1E2DD1C69D000A56DB /* TbsCollectionViewCell4.swift */,
+			);
+			path = ViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +248,14 @@
 			files = (
 				A1C7A68F2DC3A01400872CC6 /* LoginViewController.swift in Sources */,
 				A10A0F782DBE2D8400C52735 /* AboutusViewController.swift in Sources */,
+				A1F89A152DD1C677000A56DB /* TbsCollectionViewCell1.swift in Sources */,
+				A1F89A1F2DD1C69E000A56DB /* TbsCollectionViewCell4.swift in Sources */,
 				A12EA98B2DC82F5C006F5C4D /* TBBCollectionViewController.swift in Sources */,
+				A1B55B882DD04A1100E73BB1 /* TbbDetailsViewController.swift in Sources */,
+				A1F89A192DD1C684000A56DB /* tbsCollectionViewCell2.swift in Sources */,
+				A1F89A1C2DD1C690000A56DB /* TbsCollectionViewCell3.swift in Sources */,
 				A10A0F902DBF751B00C52735 /* Registration.swift in Sources */,
+				A17BB4FE2DD36EAD00010C1D /* TbsDetailsViewController.swift in Sources */,
 				A1ABCD682DC4F81F00786006 /* Nationals.swift in Sources */,
 				A10A0F632DBDE97800C52735 /* ViewController.swift in Sources */,
 				A12EA98E2DC8AFDE006F5C4D /* Tbb.swift in Sources */,
@@ -215,6 +269,8 @@
 				A10A0F7F2DBE306C00C52735 /* VisionViewController.swift in Sources */,
 				A151876F2DC1DB8800BB0DF5 /* ProfileViewController.swift in Sources */,
 				A10A0F612DBDE97800C52735 /* SceneDelegate.swift in Sources */,
+				A1EA2FA62DD2DE0B00766589 /* Tbs.swift in Sources */,
+				A1F89A092DD197E9000A56DB /* TbsViewController.swift in Sources */,
 				A10A0F882DBE318800C52735 /* LocationmapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
