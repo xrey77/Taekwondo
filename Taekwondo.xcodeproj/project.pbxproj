@@ -29,6 +29,7 @@
 		A1B55B882DD04A1100E73BB1 /* TbbDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B55B872DD04A1100E73BB1 /* TbbDetailsViewController.swift */; };
 		A1C7A68F2DC3A01400872CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7A68E2DC3A01400872CC6 /* LoginViewController.swift */; };
 		A1D4F8202DC4BDD5003793D5 /* NationalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D4F81F2DC4BDD5003793D5 /* NationalsTableViewController.swift */; };
+		A1D955BB2DD417A900BCE8CE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D955BA2DD417A900BCE8CE /* Profile.swift */; };
 		A1EA2FA62DD2DE0B00766589 /* Tbs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EA2FA52DD2DE0B00766589 /* Tbs.swift */; };
 		A1F89A092DD197E9000A56DB /* TbsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F89A082DD197E9000A56DB /* TbsViewController.swift */; };
 		A1F89A152DD1C677000A56DB /* TbsCollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F89A142DD1C677000A56DB /* TbsCollectionViewCell1.swift */; };
@@ -63,6 +64,8 @@
 		A1B55B872DD04A1100E73BB1 /* TbbDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbbDetailsViewController.swift; sourceTree = "<group>"; };
 		A1C7A68E2DC3A01400872CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A1D4F81F2DC4BDD5003793D5 /* NationalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalsTableViewController.swift; sourceTree = "<group>"; };
+		A1D955BA2DD417A900BCE8CE /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A1D955BD2DD46FD900BCE8CE /* Taekwondo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Taekwondo.entitlements; sourceTree = "<group>"; };
 		A1EA2FA52DD2DE0B00766589 /* Tbs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tbs.swift; sourceTree = "<group>"; };
 		A1F89A082DD197E9000A56DB /* TbsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbsViewController.swift; sourceTree = "<group>"; };
 		A1F89A142DD1C677000A56DB /* TbsCollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbsCollectionViewCell1.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		A10A0F5D2DBDE97800C52735 /* Taekwondo */ = {
 			isa = PBXGroup;
 			children = (
+				A1D955BD2DD46FD900BCE8CE /* Taekwondo.entitlements */,
 				A1EA2FA92DD331D600766589 /* CollectionViews */,
 				A1F89A132DD1C653000A56DB /* ViewCells */,
 				A1B55B812DD037AD00E73BB1 /* Utilities */,
@@ -147,6 +151,7 @@
 				A1ABCD672DC4F81F00786006 /* Nationals.swift */,
 				A12EA98D2DC8AFDE006F5C4D /* Tbb.swift */,
 				A1EA2FA52DD2DE0B00766589 /* Tbs.swift */,
+				A1D955BA2DD417A900BCE8CE /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				A10A0F612DBDE97800C52735 /* SceneDelegate.swift in Sources */,
 				A1EA2FA62DD2DE0B00766589 /* Tbs.swift in Sources */,
 				A1F89A092DD197E9000A56DB /* TbsViewController.swift in Sources */,
+				A1D955BB2DD417A900BCE8CE /* Profile.swift in Sources */,
 				A10A0F882DBE318800C52735 /* LocationmapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -403,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -418,17 +424,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Taekwondo/Taekwondo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7ZRZR97UNF;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				INFOPLIST_FILE = Taekwondo/Info.plist;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Reynald-Gragasin.Taekwondo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -437,17 +447,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Taekwondo/Taekwondo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7ZRZR97UNF;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				INFOPLIST_FILE = Taekwondo/Info.plist;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Reynald-Gragasin.Taekwondo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
