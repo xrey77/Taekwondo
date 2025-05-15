@@ -4,16 +4,18 @@
 //
 //  Created by Reynald Marquez-Gragasin on 4/27/25.
 //
+import iCarousel
 import Foundation
 import UIKit
 
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, iCarouselDataSource {
     private let iosVersion = UIDevice.current.name
     
     private var menuView: UIView!
     private let menuData: NSArray = ["About Us","Contact Us","Location Map","Vision","Mission","Competitions","Year Plan","Training Schedules","Olympics", "Login","Register","Profile","Logout"]
-    private let menuIcon: NSArray = ["questionmark.diamond","phone","mappin.circle","person","person","person","person","person","person","person","person","person","person"]
+    private let menuIcon: NSArray = ["questionmark.diamond","phone","mappin.circle","eye","person.2","person.2.square.stack","table.badge.more","qrcode.viewfinder","text.badge.checkmark","wand.and.stars","lock.rotation","person.badge.plus.fill","lock.circle"]
+    
     private let bottomView = UIView()
     private let topView = UIView()
     private var bgView = UIView()
@@ -22,21 +24,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private let Hstack = UIStackView()
     private var menuTable: UITableView!
     private var show = true
+
+//    private let splashView: UIImageView = {
+//       let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 300))
+//        imageView.image = UIImage(named: "pta_splash")
+//        return imageView
+//    }()
+
     private let scrollView: UIScrollView = {
         let sv = UIScrollView()
         sv.backgroundColor = UIColor.black
         return sv
     }()
     
+    
+    
     private var bodyView: UIView = {
         let v = UIScrollView()
         return v
     }()
 
+    private let tkdCarousel: iCarousel = {
+        let carouselView = iCarousel()
+        carouselView.type = .coverFlow
+        carouselView.type = .rotary
+        return carouselView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("IOS VERSION : \(iosVersion)")
+//        view.addSubview(splashView)
+//        print("IOS VERSION : \(iosVersion)")
         setupUI()
 //        setGradientBackground()
         
@@ -52,12 +70,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.swipedUp))
         swipeUp.direction = UISwipeGestureRecognizer.Direction.up
-    
-        ///BODY
-        let bodyIcon1 = UIImageView(frame: CGRect(x:1, y:70, width:380,height:200));
-        bodyIcon1.image = UIImage(named: "tkd1.png")
-        self.bodyView.addSubview(bodyIcon1)
-
+        
+        ///BODY / CAROUSEL
+        self.tkdCarousel.dataSource = self
+        self.tkdCarousel.frame = CGRect(x: 0, y: 30, width: view.frame.size.width, height: 250)
+        self.tkdCarousel.autoscroll = -0.1
+        self.tkdCarousel.bounceDistance = 0.1
+        self.bodyView.addSubview(tkdCarousel)
+        
         var bodyLabel1 = UILabel()
         if (iosVersion == "iPhone 8") {
             bodyLabel1 = UILabel(frame: CGRect(x: 10, y: 280, width: self.view.frame.size.width-20, height: 40))
@@ -688,6 +708,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         menuTable.allowsSelection = true
     }
     
+    
+
+    
+    
+    ///CAROUSEL
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return 7
+    }
+
+
+    
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        let view1 = UIView(frame: CGRect(x: 0, y: 20, width: self.bodyView.frame.size.width/1.4, height: 200))
+        let imgView = UIImageView(frame: self.view.bounds)
+        view1.addSubview(imgView)
+        imgView.frame = CGRect(x: 0, y: 20, width: self.bodyView.frame.size.width/1.5, height:200)
+        imgView.contentMode = .scaleAspectFill
+        imgView.image = UIImage(named: "tkd\(index+1)")
+        return view1
+    }
+    
+    
     private func setupUI() {
         self.view.addSubview(self.scrollView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -714,9 +756,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
 
+
+    
     override func viewDidAppear(_ animated: Bool) {
         self.showBars()
     }
+    
+    
+
+    
     
     func showBars() {
         UIView.animate(withDuration: 0.35, animations: { [self] in
@@ -828,11 +876,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.textLabel!.text = "\(menuData[2])"
         case 3:
             cell.imageView?.image =  UIImage(systemName: menuIcon[indexPath.row] as! String)
-            cell.imageView?.tintColor = UIColor.yellow
+            cell.imageView?.tintColor = UIColor.cyan
             cell.textLabel!.text = "\(menuData[3])"
         case 4:
             cell.imageView?.image =  UIImage(systemName: menuIcon[indexPath.row] as! String)
-            cell.imageView?.tintColor = UIColor.yellow
+            cell.imageView?.tintColor = UIColor.darkGray
             cell.textLabel!.text = "\(menuData[4])"
         case 5:
             cell.imageView?.image =  UIImage(systemName: menuIcon[indexPath.row] as! String)
@@ -840,24 +888,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.textLabel!.text = "\(menuData[5])"
         case 6:
             cell.imageView?.image =  UIImage(systemName: menuIcon[indexPath.row] as! String)
-            cell.imageView?.tintColor = UIColor.yellow
+            cell.imageView?.tintColor = UIColor.orange
             cell.textLabel!.text = "\(menuData[6])"
         case 7:
             cell.imageView?.image =  UIImage(systemName: menuIcon[indexPath.row] as! String)
-            cell.imageView?.tintColor = UIColor.yellow
+            cell.imageView?.tintColor = UIColor.purple
             cell.textLabel!.text = "\(menuData[7])"
         case 8:
             cell.imageView?.image =  UIImage(systemName: menuIcon[indexPath.row] as! String)
-            cell.imageView?.tintColor = UIColor.yellow
+            cell.imageView?.tintColor = UIColor.systemPink
             cell.textLabel!.text = "\(menuData[8])"
         case 9:
             if UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == true {
                 cell.imageView?.image =  UIImage(systemName: menuIcon[indexPath.row] as! String)
-                cell.imageView?.tintColor = UIColor.yellow
+                cell.imageView?.tintColor = UIColor.white
                 cell.textLabel!.text = "\(menuData[11])"
             } else {
                 cell.imageView?.image =  UIImage(systemName: menuIcon[indexPath.row] as! String)
-                cell.imageView?.tintColor = UIColor.yellow
+                cell.imageView?.tintColor = UIColor.blue
                 cell.textLabel!.text = "\(menuData[9])"
             }
         case 10:
@@ -1348,6 +1396,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
 
     }
+
     
+    ///SPLASH SCREEN ANIMATION
+//    override func viewDidLayoutSubviews() {
+//        self.splashView.center = view.center
+//        DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
+//            animates()
+//    })
+//        
+//    func animates() {
+//        UIView.animate(withDuration: 1, animations: {
+//            let size = self.view.frame.size.width * 1.5
+//            let diffx = size - self.view.frame.size.width
+//            let diffy = self.view.frame.size.height - size
+//
+//            
+//            self.splashView.frame = CGRect(x: -(diffx/2), y: diffy/2, width: size, height: size)
+//        })
+//    }
+
 }
 
