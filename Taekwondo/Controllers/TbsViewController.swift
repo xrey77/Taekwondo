@@ -74,10 +74,7 @@ class TbsViewController: UIViewController, UICollectionViewDataSource, UICollect
         setupUIScroll()
 
             layout.scrollDirection = .horizontal
-            layout.minimumInteritemSpacing = 10
-
             layout.itemSize =  CGSize(width: itemWidth*2.3, height: 221)
-
         
             ///BATCH 1
             batch1Label.frame = CGRect(x: 10, y: 0, width: 309, height: 21)
@@ -163,11 +160,23 @@ class TbsViewController: UIViewController, UICollectionViewDataSource, UICollect
             collectionview4.backgroundColor = UIColor.gray
             batch4View.addSubview(collectionview4)
             GETTbSBatch4(batchId: 4)
+
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "arrow.left.square"),
+            style: .done,
+            target: self,
+            action: #selector(barTapped(sender:))
+        )
+
     }
         
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+
+    @objc func barTapped(sender: UIBarButtonItem) {
+         dismiss(animated: true, completion: nil)
+     }
 
     private func setupUIScroll() {
         self.view.addSubview(self.scrollView)

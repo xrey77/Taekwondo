@@ -211,11 +211,23 @@ class RegisterViewController: UIViewController {
             alertView.transform = moveUp
             alertView.frame = CGRect(x: 40, y: 500, width: 300, height: 200)
         })
+
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "arrow.left.square"),
+            style: .done,
+            target: self,
+            action: #selector(barTapped(sender:))
+        )
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+
+    @objc func barTapped(sender: UIBarButtonItem) {
+         dismiss(animated: true, completion: nil)
+     }
 
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {

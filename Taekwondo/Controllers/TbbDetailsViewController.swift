@@ -54,9 +54,19 @@ class TbbDetailsViewController: UIViewController {
         uiLbBatch.frame = CGRect(x: 100, y: 520, width: 300, height: 40)
         self.view.addSubview(uiLbBatch)
 
-        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "arrow.left.square"),
+            style: .done,
+            target: self,
+            action: #selector(barTapped(sender:))
+        )
+
     }
         
+    @objc func barTapped(sender: UIBarButtonItem) {
+         dismiss(animated: true, completion: nil)
+     }
+
     func tbbProfile(tbbId: Int) {
         guard let urlx = URL(string: "http://127.0.0.1:9000/gettbbid/\(tbbId)") else { return }
          URLSession.shared.dataTask(with: urlx) { data, response, error in

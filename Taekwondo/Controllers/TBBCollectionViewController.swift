@@ -37,45 +37,32 @@ class TBBCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+
         loadTbbBatch1(batchId: 1)
         loadTbbBatch2(batchId: 2)
         loadTbbBatch3(batchId: 3)
         loadTbbBatch4(batchId: 4)
 
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-
-        layout.itemSize = CGSize(width: (view.frame.size.width/3)+50,
-                                 height: (view.frame.size.width/3)+150)
-
-        layout.headerReferenceSize = CGSize(width: 300, height: 50);  //HEADER CONFIGURATION
-//        layout.footerReferenceSize = CGSize(width: 300, height: 100)  //FOOTER CONFIGURATION
-        
-//        layout.minimumLineSpacing = 20
-        
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        guard let collectionView = collectionView else {
-            return
-        }
         //HEADER
         self.collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
 
         //FOOTER
 //        self.collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerReuseIdentifier)
         
-//        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
-//            layout.sectionHeadersPinToVisibleBounds = true
-//            layout.sectionFootersPinToVisibleBounds = true
-//        }
-
-        
-        
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         view.addSubview(collectionView)
         collectionView.frame = view.bounds
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "arrow.left.square"),
+            style: .done,
+            target: self,
+            action: #selector(barTapped(sender:))
+        )
+
+        
     }
+    
         
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -319,6 +306,10 @@ class TBBCollectionViewController: UICollectionViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
+    @objc func barTapped(sender: UIBarButtonItem) {
+         dismiss(animated: true, completion: nil)
+     }
+
     
     func loadTbbBatch1(batchId: Int) {
         guard let url = URL(string: "http://127.0.0.1:9000/gettbbbatch/\(batchId)") else { return }
@@ -379,4 +370,3 @@ class TBBCollectionViewController: UICollectionViewController {
     
     
 }
-

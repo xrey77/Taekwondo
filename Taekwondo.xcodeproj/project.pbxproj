@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,10 +22,18 @@
 		A10A0F882DBE318800C52735 /* LocationmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F872DBE318800C52735 /* LocationmapViewController.swift */; };
 		A10A0F8B2DBE3B4B00C52735 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F8A2DBE3B4B00C52735 /* HomeViewController.swift */; };
 		A10A0F902DBF751B00C52735 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10A0F8F2DBF751A00C52735 /* Registration.swift */; };
+		A12882EA2DD89D600068DCE0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12882E92DD89D5F0068DCE0 /* LocationManager.swift */; };
 		A12EA98B2DC82F5C006F5C4D /* TBBCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA98A2DC82F5C006F5C4D /* TBBCollectionViewController.swift */; };
 		A12EA98E2DC8AFDE006F5C4D /* Tbb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA98D2DC8AFDE006F5C4D /* Tbb.swift */; };
 		A151876F2DC1DB8800BB0DF5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151876E2DC1DB8800BB0DF5 /* ProfileViewController.swift */; };
 		A17BB4FE2DD36EAD00010C1D /* TbsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17BB4FD2DD36EAD00010C1D /* TbsDetailsViewController.swift */; };
+		A1A9D3D32DD73EBD00EBABB5 /* CompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9D3D22DD73EBD00EBABB5 /* CompetitionsViewController.swift */; };
+		A1A9D3D62DD73F6000EBABB5 /* YearplanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9D3D52DD73F6000EBABB5 /* YearplanViewController.swift */; };
+		A1A9D3D92DD73FDF00EBABB5 /* TrainingSchedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9D3D82DD73FDF00EBABB5 /* TrainingSchedViewController.swift */; };
+		A1A9D3DC2DD7403A00EBABB5 /* OlympicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9D3DB2DD7403A00EBABB5 /* OlympicsViewController.swift */; };
+		A1A9D3DF2DD741D000EBABB5 /* PromotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9D3DE2DD741D000EBABB5 /* PromotionsViewController.swift */; };
+		A1A9D3E22DD7420500EBABB5 /* SatelitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9D3E12DD7420500EBABB5 /* SatelitesViewController.swift */; };
+		A1A9D3E82DD7456500EBABB5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9D3E72DD7456500EBABB5 /* SettingsViewController.swift */; };
 		A1ABCD682DC4F81F00786006 /* Nationals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ABCD672DC4F81F00786006 /* Nationals.swift */; };
 		A1B55B882DD04A1100E73BB1 /* TbbDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B55B872DD04A1100E73BB1 /* TbbDetailsViewController.swift */; };
 		A1C7A68F2DC3A01400872CC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7A68E2DC3A01400872CC6 /* LoginViewController.swift */; };
@@ -59,10 +67,18 @@
 		A10A0F872DBE318800C52735 /* LocationmapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationmapViewController.swift; sourceTree = "<group>"; };
 		A10A0F8A2DBE3B4B00C52735 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A10A0F8F2DBF751A00C52735 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		A12882E92DD89D5F0068DCE0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A12EA98A2DC82F5C006F5C4D /* TBBCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBBCollectionViewController.swift; sourceTree = "<group>"; };
 		A12EA98D2DC8AFDE006F5C4D /* Tbb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tbb.swift; sourceTree = "<group>"; };
 		A151876E2DC1DB8800BB0DF5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A17BB4FD2DD36EAD00010C1D /* TbsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbsDetailsViewController.swift; sourceTree = "<group>"; };
+		A1A9D3D22DD73EBD00EBABB5 /* CompetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsViewController.swift; sourceTree = "<group>"; };
+		A1A9D3D52DD73F6000EBABB5 /* YearplanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearplanViewController.swift; sourceTree = "<group>"; };
+		A1A9D3D82DD73FDF00EBABB5 /* TrainingSchedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSchedViewController.swift; sourceTree = "<group>"; };
+		A1A9D3DB2DD7403A00EBABB5 /* OlympicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlympicsViewController.swift; sourceTree = "<group>"; };
+		A1A9D3DE2DD741D000EBABB5 /* PromotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsViewController.swift; sourceTree = "<group>"; };
+		A1A9D3E12DD7420500EBABB5 /* SatelitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelitesViewController.swift; sourceTree = "<group>"; };
+		A1A9D3E72DD7456500EBABB5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A1ABCD672DC4F81F00786006 /* Nationals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nationals.swift; sourceTree = "<group>"; };
 		A1B55B872DD04A1100E73BB1 /* TbbDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbbDetailsViewController.swift; sourceTree = "<group>"; };
 		A1C7A68E2DC3A01400872CC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +162,14 @@
 				A1B55B872DD04A1100E73BB1 /* TbbDetailsViewController.swift */,
 				A1F89A082DD197E9000A56DB /* TbsViewController.swift */,
 				A17BB4FD2DD36EAD00010C1D /* TbsDetailsViewController.swift */,
+				A1A9D3D22DD73EBD00EBABB5 /* CompetitionsViewController.swift */,
+				A1A9D3D52DD73F6000EBABB5 /* YearplanViewController.swift */,
+				A1A9D3D82DD73FDF00EBABB5 /* TrainingSchedViewController.swift */,
+				A1A9D3DB2DD7403A00EBABB5 /* OlympicsViewController.swift */,
+				A1A9D3DE2DD741D000EBABB5 /* PromotionsViewController.swift */,
+				A1A9D3E12DD7420500EBABB5 /* SatelitesViewController.swift */,
+				A1A9D3E72DD7456500EBABB5 /* SettingsViewController.swift */,
+				A12882E92DD89D5F0068DCE0 /* LocationManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,7 +218,6 @@
 				DFF8B3196DE09B58A4E057D8 /* Pods-Taekwondo.debug.xcconfig */,
 				578C64ED3C0831EE0EC8E961 /* Pods-Taekwondo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -322,9 +345,12 @@
 			files = (
 				A1C7A68F2DC3A01400872CC6 /* LoginViewController.swift in Sources */,
 				A10A0F782DBE2D8400C52735 /* AboutusViewController.swift in Sources */,
+				A1A9D3E22DD7420500EBABB5 /* SatelitesViewController.swift in Sources */,
 				A1F89A152DD1C677000A56DB /* TbsCollectionViewCell1.swift in Sources */,
 				A1F89A1F2DD1C69E000A56DB /* TbsCollectionViewCell4.swift in Sources */,
+				A1A9D3D62DD73F6000EBABB5 /* YearplanViewController.swift in Sources */,
 				A12EA98B2DC82F5C006F5C4D /* TBBCollectionViewController.swift in Sources */,
+				A1A9D3D92DD73FDF00EBABB5 /* TrainingSchedViewController.swift in Sources */,
 				A1B55B882DD04A1100E73BB1 /* TbbDetailsViewController.swift in Sources */,
 				A1F89A192DD1C684000A56DB /* tbsCollectionViewCell2.swift in Sources */,
 				A1F89A1C2DD1C690000A56DB /* TbsCollectionViewCell3.swift in Sources */,
@@ -334,8 +360,12 @@
 				A10A0F632DBDE97800C52735 /* ViewController.swift in Sources */,
 				A12EA98E2DC8AFDE006F5C4D /* Tbb.swift in Sources */,
 				A10A0F5F2DBDE97800C52735 /* AppDelegate.swift in Sources */,
+				A12882EA2DD89D600068DCE0 /* LocationManager.swift in Sources */,
 				A1D4F8202DC4BDD5003793D5 /* NationalsTableViewController.swift in Sources */,
 				A10A0F852DBE309600C52735 /* RegisterViewController.swift in Sources */,
+				A1A9D3DF2DD741D000EBABB5 /* PromotionsViewController.swift in Sources */,
+				A1A9D3D32DD73EBD00EBABB5 /* CompetitionsViewController.swift in Sources */,
+				A1A9D3DC2DD7403A00EBABB5 /* OlympicsViewController.swift in Sources */,
 				A10A0F7C2DBE2F7300C52735 /* ContactusViewController.swift in Sources */,
 				A10A0F8B2DBE3B4B00C52735 /* HomeViewController.swift in Sources */,
 				A1FE75C52DC0B9D1002AB742 /* LoginModel.swift in Sources */,
@@ -343,6 +373,7 @@
 				A10A0F7F2DBE306C00C52735 /* VisionViewController.swift in Sources */,
 				A151876F2DC1DB8800BB0DF5 /* ProfileViewController.swift in Sources */,
 				A10A0F612DBDE97800C52735 /* SceneDelegate.swift in Sources */,
+				A1A9D3E82DD7456500EBABB5 /* SettingsViewController.swift in Sources */,
 				A1EA2FA62DD2DE0B00766589 /* Tbs.swift in Sources */,
 				A1F89A092DD197E9000A56DB /* TbsViewController.swift in Sources */,
 				A1D955BB2DD417A900BCE8CE /* Profile.swift in Sources */,

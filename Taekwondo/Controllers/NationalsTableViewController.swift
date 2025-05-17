@@ -17,15 +17,25 @@ class NationalsTableViewController: UITableViewController  {
         super.viewDidLoad()
 //        self.view.backgroundColor = UIColor.clear
         self.loadNationalsdata()
+        
 //        self.tableView.register(UINib(nibName: "CustomHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: CustomHeader.reuseIdentifier)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
         self.tableView.dataSource = self
         self.tableView.delegate = self
 
 //        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
 //        }
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "arrow.left.square"),
+            style: .done,
+            target: self,
+            action: #selector(barTapped(sender:))
+        )
+
+        
     }
-    
 
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -100,6 +110,10 @@ class NationalsTableViewController: UITableViewController  {
             //going down
         }
     }
+    
+    @objc func barTapped(sender: UIBarButtonItem) {
+         dismiss(animated: true, completion: nil)
+     }
     
     @objc func goBack() {
        print("goback...")

@@ -2,10 +2,9 @@ XCODE 12.4 WITH SWIFT 5.3.2 Start-up MVC Project
 
 Requirements :
 
-IOS Deployment Target : IOS 14.4
-
-1. Knowledge of Swift 5.3.2 programming
-2. Create your project first, then add Image Carousel
+1. set IOS Deployment Target to IOS 14.4
+2. Knowledge of Swift 5.3.2 programming
+3. Create your project first, then add Image Carousel
    a. Navigate to the root directory
    b. execute terminal command
       * pod init
@@ -16,25 +15,26 @@ IOS Deployment Target : IOS 14.4
    d. in your ViewController where you want to implement carousel, import below
       import iCarousel
 
-3. UserDefaults understanding
-4. Rest API knowledge (Authentication and Authorization)
+4. UserDefaults understanding
+5. Rest API knowledge (Authentication and Authorization)
    * POST Request
    * GET Request
    * PUT Request
    * DELETE Request
-5. UITableView
-6. UICollectionView (Vertical and Horizontal Scroll)
-7. ScrollView
-8. UILabel
-9. UIView
-10. UIButton
-11. UIImageView
-12. Swipe Gestures
-13. UIAnimations
-14. UINavigations
-15. UITextField
-16. UISwitch
-17. Models
-18. ViewControllers
-19. UIDocumentPickerViewController
-20. UIImagePickerController
+6. UITableView
+7. UICollectionView (Vertical and Horizontal Scroll)
+8. ScrollView
+9. UILabel
+10. UIView
+11. UIButton
+12. UIImageView
+13. Swipe Gestures
+14. UIAnimations
+15. UINavigations
+16. UITextField
+17. UISwitch
+18. Models
+19. ViewControllers
+20. UIDocumentPickerViewController
+21. UIImagePickerController
+22. Extension

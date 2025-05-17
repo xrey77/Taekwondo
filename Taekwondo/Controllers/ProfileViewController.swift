@@ -188,7 +188,18 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         btnChangePwd.addTarget(self, action: #selector(didChangePassword), for: .touchUpInside)
         changePwdView.addSubview(btnChangePwd)
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "arrow.left.square"),
+            style: .done,
+            target: self,
+            action: #selector(barTapped(sender:))
+        )
+
     }
+    
+    @objc func barTapped(sender: UIBarButtonItem) {
+         dismiss(animated: true, completion: nil)
+     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -196,7 +207,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     @objc func cameraTapped(_ sender: UITapGestureRecognizer) throws {
                 
-        let alertController = UIAlertController(title: "Select Source Type Message!", message: "", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Change Profile Picture", message: "", preferredStyle: .alert)
          alertController.addAction(UIAlertAction(title: "Camera", style: UIAlertAction.Style.default, handler: { _ in
 
                 self.picker.allowsEditing = true
