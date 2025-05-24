@@ -3,6 +3,7 @@
 //  Taekwondo
 //
 //  Created by Reynald Marquez-Gragasin on 4/27/25.
+//  Sr. Software Engineer / Philippine National Taekwondo Instructor
 //
 import iCarousel
 import Foundation

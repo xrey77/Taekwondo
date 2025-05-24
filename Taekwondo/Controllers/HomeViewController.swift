@@ -88,10 +88,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel1.sizeToFit()
         self.bodyView.addSubview(bodyLabel1)
 
-        let boldAttribute1 = [
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
-        ]
-        let boldText1 = NSAttributedString(string: "Key Stages in the Evolution:", attributes: boldAttribute1)
+        var attributes1 = [NSAttributedString.Key: AnyObject]()
+        attributes1[.foregroundColor] = UIColor.yellow
+        attributes1[.font] = UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
+
+        let boldText1 = NSAttributedString(string: "Key Stages in the Evolution:", attributes: attributes1)
         let newString1 = NSMutableAttributedString()
         newString1.append(boldText1)
         var bodyLabel2 = UILabel()
@@ -108,10 +109,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel2.attributedText = newString1
         self.bodyView.addSubview(bodyLabel2)
 
-        let boldAttribute2 = [
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
-        ]
-        let boldText2 = NSAttributedString(string: "Initial Introduction (1970s):", attributes: boldAttribute2)
+        var attributes2 = [NSAttributedString.Key: AnyObject]()
+        attributes2[.foregroundColor] = UIColor.cyan
+        attributes2[.font] = UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
+
+        //*******
+        let boldText2 = NSAttributedString(string: "Initial Introduction (1970s):", attributes: attributes2)
         let newString2 = NSMutableAttributedString()
         newString2.append(boldText2)
         var bodyLabel3 = UILabel()
@@ -146,10 +149,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel4.sizeToFit()
         self.bodyView.addSubview(bodyLabel4)
 
-        let boldAttribute3 = [
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
-        ]
-        let boldText3 = NSAttributedString(string: "Revival and Establishment (Mid-1970s):", attributes: boldAttribute3)
+        var attributes3 = [NSAttributedString.Key: AnyObject]()
+        attributes3[.foregroundColor] = UIColor.cyan
+        attributes3[.font] = UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
+
+        //*************
+        let boldText3 = NSAttributedString(string: "Revival and Establishment (Mid-1970s):", attributes: attributes3)
         let newString3 = NSMutableAttributedString()
         newString3.append(boldText3)
         var bodyLabel5 = UILabel()
@@ -185,10 +190,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel6.sizeToFit()
         self.bodyView.addSubview(bodyLabel6)
 
-        let boldAttribute4 = [
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
-        ]
-        let boldText4 = NSAttributedString(string: "Growth and Popularity (1980s-Present):", attributes: boldAttribute4)
+        //SET FONT SIZE AND FONT-WEIGHT
+        var attributes4 = [NSAttributedString.Key: AnyObject]()
+        attributes4[.foregroundColor] = UIColor.cyan
+        attributes4[.font] = UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
+
+        //*************
+        let boldText4 = NSAttributedString(string: "Growth and Popularity (1980s-Present):", attributes: attributes4)
         let newString4 = NSMutableAttributedString()
         newString4.append(boldText4)
         var bodyLabel7 = UILabel()
@@ -201,8 +209,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             bodyLabel7 = UILabel(frame: CGRect(x: 10, y: 750, width: 350, height: 40))
         }
-        bodyLabel7.textColor = UIColor.white
-        bodyLabel7.attributedText = newString4
+        let boldText5a = NSAttributedString(string: "The Development and Training:", attributes: attributes4)
+        let newString5a = NSMutableAttributedString()
+        newString5a.append(boldText5a)
+        bodyLabel7.attributedText = newString5a
         self.bodyView.addSubview(bodyLabel7)
 
         var bodyLabel8 = UILabel()
@@ -223,10 +233,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel8.sizeToFit()
         self.bodyView.addSubview(bodyLabel8)
 
-        let boldAttribute5 = [
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
-        ]
-        let boldText5 = NSAttributedString(string: "Formal Structure and Certification (2010s):", attributes: boldAttribute5)
+        let boldText5 = NSAttributedString(string: "Formal Structure and Certification (2010s):", attributes: attributes4)
         let newString5 = NSMutableAttributedString()
         newString5.append(boldText5)
         var bodyLabel9 = UILabel()
@@ -240,7 +247,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             bodyLabel9 = UILabel(frame: CGRect(x: 10, y: 880, width: 350, height: 40))
         }
         bodyLabel9.textColor = UIColor.white
-        bodyLabel9.attributedText = newString4
+        bodyLabel9.attributedText = newString5
         self.bodyView.addSubview(bodyLabel9)
 
         var bodyLabel10 = UILabel()
@@ -261,10 +268,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel10.sizeToFit()
         self.bodyView.addSubview(bodyLabel10)
 
-        let boldAttribute6 = [
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
-        ]
-        let boldText6 = NSAttributedString(string: "Current Status:", attributes: boldAttribute6)
+        let boldText6 = NSAttributedString(string: "Current Status:", attributes: attributes1)
         let newString6 = NSMutableAttributedString()
         newString6.append(boldText6)
         let bodyLabel11 = UILabel(frame: CGRect(x: 20, y: 1030, width: 350, height: 40))
@@ -272,6 +276,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel11.attributedText = newString4
         self.bodyView.addSubview(bodyLabel11)
 
+        
         var bodyLabel12 = UILabel()
         if (iosVersion == "iPhone 8") {
             bodyLabel12 = UILabel(frame: CGRect(x: 10, y: 1060, width: self.view.frame.size.width-20, height: 40))
@@ -290,10 +295,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel12.sizeToFit()
         self.bodyView.addSubview(bodyLabel12)
 
-        let boldAttribute7 = [
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!
-        ]
-        let boldText7 = NSAttributedString(string: "Current Status:", attributes: boldAttribute7)
+        let boldText7 = NSAttributedString(string: "Current Status:", attributes: attributes1)
         let newString7 = NSMutableAttributedString()
         newString7.append(boldText7)
         let bodyLabel13 = UILabel(frame: CGRect(x: 20, y: 1160, width: 350, height: 40))
@@ -320,10 +322,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel14.sizeToFit()
         self.bodyView.addSubview(bodyLabel14)
 
-        let boldAttribute8 = [
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 19.0)!
-        ]
-        let boldText8 = NSAttributedString(string: "Key Figures:", attributes: boldAttribute8)
+        let boldText8 = NSAttributedString(string: "Key Figures:", attributes: attributes1)
         let newString8 = NSMutableAttributedString()
         newString8.append(boldText8)
         var bodyLabel15 = UILabel()
@@ -340,12 +339,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel15.attributedText = newString8
         self.bodyView.addSubview(bodyLabel15)
 
-        let firstPartInfo1 = [
-            NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 16.0)!
-        ]
-        let attributedString1 = NSMutableAttributedString(string: "♦ Grandmaster Kim Bok Man :", attributes: firstPartInfo1)
+        let attributedString1 = NSMutableAttributedString(string: "♦ Grandmaster Kim Bok Man :", attributes: attributes4)
 
-        // Second part with font size 20
         let secondPartInfo1 = [
             NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 16.0)!
         ]
@@ -359,16 +354,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel16.lineBreakMode = NSLineBreakMode.byWordWrapping
         bodyLabel16.sizeToFit()
         self.bodyView.addSubview(bodyLabel16)
-
+                
+        let attributedString2 = NSMutableAttributedString(string: "♦ Grandmaster Young Man Park :", attributes: attributes4)
         
-        let firstPartInfo2 = [
-            NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 16.0)!
-        ]
-        let attributedString2 = NSMutableAttributedString(string: "♦ Grandmaster Young Man Park :", attributes: firstPartInfo2)
-
         let secondPartInfo2 = [
             NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 16.0)!
         ]
+    
         attributedString2.append(NSAttributedString(string: " Another early pioneer who worked with Kim Bok Man to introduce Taekwondo.", attributes: secondPartInfo2))
 
         var bodyLabel17 = UILabel()
@@ -389,10 +381,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         bodyLabel17.sizeToFit()
         self.bodyView.addSubview(bodyLabel17)
 
-        let firstPartInfo3 = [
-            NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 16.0)!
-        ]
-        let attributedString3 = NSMutableAttributedString(string: "♦ Grandmaster Hong Sung-Chon :", attributes: firstPartInfo3)
+        let attributedString3 = NSMutableAttributedString(string: "♦ Grandmaster Hong Sung-Chon :", attributes: attributes4)
 
         let secondPartInfo3 = [
             NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 16.0)!
@@ -736,7 +725,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             bodyView.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor),
             bodyView.trailingAnchor.constraint(equalTo: self.scrollView.trailingAnchor),
             bodyView.widthAnchor.constraint(equalTo: self.scrollView.widthAnchor, multiplier: 1),
-            bodyView.heightAnchor.constraint(equalTo: self.scrollView.heightAnchor, multiplier: 2.5),
+            bodyView.heightAnchor.constraint(equalTo: self.scrollView.heightAnchor, multiplier: 2.9),
         ])
     }
     

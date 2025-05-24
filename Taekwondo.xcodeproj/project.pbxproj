@@ -27,6 +27,16 @@
 		A12EA98E2DC8AFDE006F5C4D /* Tbb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12EA98D2DC8AFDE006F5C4D /* Tbb.swift */; };
 		A151876F2DC1DB8800BB0DF5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151876E2DC1DB8800BB0DF5 /* ProfileViewController.swift */; };
 		A17BB4FE2DD36EAD00010C1D /* TbsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17BB4FD2DD36EAD00010C1D /* TbsDetailsViewController.swift */; };
+		A19999D92DDAFA84000DECB9 /* CABasicAnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19999D82DDAFA84000DECB9 /* CABasicAnimationsViewController.swift */; };
+		A19999DD2DDAFB50000DECB9 /* CAKeyframeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19999DC2DDAFB50000DECB9 /* CAKeyframeAnimations.swift */; };
+		A19999E02DDB1CE8000DECB9 /* CASpringAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19999DF2DDB1CE7000DECB9 /* CASpringAnimations.swift */; };
+		A19999E32DDB32FB000DECB9 /* CATransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19999E22DDB32FB000DECB9 /* CATransitionAnimation.swift */; };
+		A19999E62DDB4308000DECB9 /* CAValueFunctionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19999E52DDB4308000DECB9 /* CAValueFunctionAnimation.swift */; };
+		A19999E92DDB4A2C000DECB9 /* CAAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19999E82DDB4A2C000DECB9 /* CAAnimationDelegate.swift */; };
+		A19999EC2DDB562A000DECB9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19999EB2DDB562A000DECB9 /* CoreText.framework */; };
+		A19999EF2DDB58BA000DECB9 /* CTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19999EE2DDB58BA000DECB9 /* CTView.swift */; };
+		A19999F32DDB5AEB000DECB9 /* MarkupParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19999F22DDB5AEB000DECB9 /* MarkupParser.swift */; };
+		A19999F92DDB5D02000DECB9 /* CoreTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19999F82DDB5D02000DECB9 /* CoreTextViewController.swift */; };
 		A1A9D3D32DD73EBD00EBABB5 /* CompetitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9D3D22DD73EBD00EBABB5 /* CompetitionsViewController.swift */; };
 		A1A9D3D62DD73F6000EBABB5 /* YearplanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9D3D52DD73F6000EBABB5 /* YearplanViewController.swift */; };
 		A1A9D3D92DD73FDF00EBABB5 /* TrainingSchedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9D3D82DD73FDF00EBABB5 /* TrainingSchedViewController.swift */; };
@@ -72,6 +82,16 @@
 		A12EA98D2DC8AFDE006F5C4D /* Tbb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tbb.swift; sourceTree = "<group>"; };
 		A151876E2DC1DB8800BB0DF5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A17BB4FD2DD36EAD00010C1D /* TbsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbsDetailsViewController.swift; sourceTree = "<group>"; };
+		A19999D82DDAFA84000DECB9 /* CABasicAnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CABasicAnimationsViewController.swift; sourceTree = "<group>"; };
+		A19999DC2DDAFB50000DECB9 /* CAKeyframeAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAKeyframeAnimations.swift; sourceTree = "<group>"; };
+		A19999DF2DDB1CE7000DECB9 /* CASpringAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASpringAnimations.swift; sourceTree = "<group>"; };
+		A19999E22DDB32FB000DECB9 /* CATransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransitionAnimation.swift; sourceTree = "<group>"; };
+		A19999E52DDB4308000DECB9 /* CAValueFunctionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAValueFunctionAnimation.swift; sourceTree = "<group>"; };
+		A19999E82DDB4A2C000DECB9 /* CAAnimationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAAnimationDelegate.swift; sourceTree = "<group>"; };
+		A19999EB2DDB562A000DECB9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		A19999EE2DDB58BA000DECB9 /* CTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTView.swift; sourceTree = "<group>"; };
+		A19999F22DDB5AEB000DECB9 /* MarkupParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkupParser.swift; sourceTree = "<group>"; };
+		A19999F82DDB5D02000DECB9 /* CoreTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTextViewController.swift; sourceTree = "<group>"; };
 		A1A9D3D22DD73EBD00EBABB5 /* CompetitionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsViewController.swift; sourceTree = "<group>"; };
 		A1A9D3D52DD73F6000EBABB5 /* YearplanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearplanViewController.swift; sourceTree = "<group>"; };
 		A1A9D3D82DD73FDF00EBABB5 /* TrainingSchedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSchedViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19999EC2DDB562A000DECB9 /* CoreText.framework in Frameworks */,
 				4CAE65F5EE8CFCBEC844132C /* Pods_Taekwondo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +149,8 @@
 		A10A0F5D2DBDE97800C52735 /* Taekwondo */ = {
 			isa = PBXGroup;
 			children = (
+				A19999ED2DDB5732000DECB9 /* CoreText */,
+				A19999D72DDAFA29000DECB9 /* CoreAnimations */,
 				A1D955BD2DD46FD900BCE8CE /* Taekwondo.entitlements */,
 				A1EA2FA92DD331D600766589 /* CollectionViews */,
 				A1F89A132DD1C653000A56DB /* ViewCells */,
@@ -187,6 +210,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A19999D72DDAFA29000DECB9 /* CoreAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				A19999D82DDAFA84000DECB9 /* CABasicAnimationsViewController.swift */,
+				A19999DC2DDAFB50000DECB9 /* CAKeyframeAnimations.swift */,
+				A19999DF2DDB1CE7000DECB9 /* CASpringAnimations.swift */,
+				A19999E22DDB32FB000DECB9 /* CATransitionAnimation.swift */,
+				A19999E52DDB4308000DECB9 /* CAValueFunctionAnimation.swift */,
+				A19999E82DDB4A2C000DECB9 /* CAAnimationDelegate.swift */,
+			);
+			path = CoreAnimations;
+			sourceTree = "<group>";
+		};
+		A19999ED2DDB5732000DECB9 /* CoreText */ = {
+			isa = PBXGroup;
+			children = (
+				A19999EE2DDB58BA000DECB9 /* CTView.swift */,
+				A19999F22DDB5AEB000DECB9 /* MarkupParser.swift */,
+				A19999F82DDB5D02000DECB9 /* CoreTextViewController.swift */,
+			);
+			path = CoreText;
+			sourceTree = "<group>";
+		};
 		A1B55B812DD037AD00E73BB1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +270,7 @@
 		DD87C9683E1A9A7B8EE0D76D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A19999EB2DDB562A000DECB9 /* CoreText.framework */,
 				4A85B2A04E80466101B65049 /* Pods_Taekwondo.framework */,
 			);
 			name = Frameworks;
@@ -344,6 +391,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C7A68F2DC3A01400872CC6 /* LoginViewController.swift in Sources */,
+				A19999EF2DDB58BA000DECB9 /* CTView.swift in Sources */,
+				A19999D92DDAFA84000DECB9 /* CABasicAnimationsViewController.swift in Sources */,
 				A10A0F782DBE2D8400C52735 /* AboutusViewController.swift in Sources */,
 				A1A9D3E22DD7420500EBABB5 /* SatelitesViewController.swift in Sources */,
 				A1F89A152DD1C677000A56DB /* TbsCollectionViewCell1.swift in Sources */,
@@ -352,22 +401,28 @@
 				A12EA98B2DC82F5C006F5C4D /* TBBCollectionViewController.swift in Sources */,
 				A1A9D3D92DD73FDF00EBABB5 /* TrainingSchedViewController.swift in Sources */,
 				A1B55B882DD04A1100E73BB1 /* TbbDetailsViewController.swift in Sources */,
+				A19999DD2DDAFB50000DECB9 /* CAKeyframeAnimations.swift in Sources */,
 				A1F89A192DD1C684000A56DB /* tbsCollectionViewCell2.swift in Sources */,
 				A1F89A1C2DD1C690000A56DB /* TbsCollectionViewCell3.swift in Sources */,
 				A10A0F902DBF751B00C52735 /* Registration.swift in Sources */,
 				A17BB4FE2DD36EAD00010C1D /* TbsDetailsViewController.swift in Sources */,
+				A19999F92DDB5D02000DECB9 /* CoreTextViewController.swift in Sources */,
+				A19999E02DDB1CE8000DECB9 /* CASpringAnimations.swift in Sources */,
 				A1ABCD682DC4F81F00786006 /* Nationals.swift in Sources */,
 				A10A0F632DBDE97800C52735 /* ViewController.swift in Sources */,
 				A12EA98E2DC8AFDE006F5C4D /* Tbb.swift in Sources */,
 				A10A0F5F2DBDE97800C52735 /* AppDelegate.swift in Sources */,
 				A12882EA2DD89D600068DCE0 /* LocationManager.swift in Sources */,
+				A19999E32DDB32FB000DECB9 /* CATransitionAnimation.swift in Sources */,
 				A1D4F8202DC4BDD5003793D5 /* NationalsTableViewController.swift in Sources */,
 				A10A0F852DBE309600C52735 /* RegisterViewController.swift in Sources */,
+				A19999E62DDB4308000DECB9 /* CAValueFunctionAnimation.swift in Sources */,
 				A1A9D3DF2DD741D000EBABB5 /* PromotionsViewController.swift in Sources */,
 				A1A9D3D32DD73EBD00EBABB5 /* CompetitionsViewController.swift in Sources */,
 				A1A9D3DC2DD7403A00EBABB5 /* OlympicsViewController.swift in Sources */,
 				A10A0F7C2DBE2F7300C52735 /* ContactusViewController.swift in Sources */,
 				A10A0F8B2DBE3B4B00C52735 /* HomeViewController.swift in Sources */,
+				A19999F32DDB5AEB000DECB9 /* MarkupParser.swift in Sources */,
 				A1FE75C52DC0B9D1002AB742 /* LoginModel.swift in Sources */,
 				A10A0F822DBE307A00C52735 /* MissionViewController.swift in Sources */,
 				A10A0F7F2DBE306C00C52735 /* VisionViewController.swift in Sources */,
@@ -376,6 +431,7 @@
 				A1A9D3E82DD7456500EBABB5 /* SettingsViewController.swift in Sources */,
 				A1EA2FA62DD2DE0B00766589 /* Tbs.swift in Sources */,
 				A1F89A092DD197E9000A56DB /* TbsViewController.swift in Sources */,
+				A19999E92DDB4A2C000DECB9 /* CAAnimationDelegate.swift in Sources */,
 				A1D955BB2DD417A900BCE8CE /* Profile.swift in Sources */,
 				A10A0F882DBE318800C52735 /* LocationmapViewController.swift in Sources */,
 			);
